@@ -44,7 +44,7 @@ def entry(bot, update):
             # res = bot.forwardMessage(chat_id=-1001180443770, from_chat_id=update.message.chat.id, message_id=update.message.message_id)
             if not temp_flood_ban_list.get(update.message.chat.id):
                 res = bot.sendMessage(chat_id=-1001180443770, text=update.message.text+"\n\n"+"from: "+update.message.chat.first_name+" #q"+str(update.message.chat.id))
-                bot.sendMessage(chat_id=update.message.chat.id, text="Query posted: https://t.me/covid19indiaorg_medhelp/"+str(res['message_id'])+'\n\nI will notify you when a Doctor responds. If you have additional requests or information please share in this thread.')
+                bot.sendMessage(chat_id=update.message.chat.id, text="Query posted: https://t.me/cov19medhelp/"+str(res['message_id'])+'\n\nI will notify you when a Doctor responds. If you have additional requests or information please share in this thread.')
                 temp_flood_ban_list[update.message.chat.id] = True
             else:
                 bot.sendMessage(chat_id=update.message.chat.id, text="Please wait a few minutes before posting your next query 🙏")
