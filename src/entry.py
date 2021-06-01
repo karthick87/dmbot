@@ -26,7 +26,7 @@ def entry(bot, update):
         logging.error(e)
         # bot.send_message(chat_id="-1001164870268", text=str(e))
         pass
-    if update.message and update.message.chat.id == -1001375778275:
+    if update.message and update.message.chat.id == -100137577827555:
         if update.message.reply_to_message and update.message.reply_to_message.forward_from_chat and update.message.reply_to_message.forward_from_chat.id == -10014403177999:
             try:
                 personal_chat_id = update.message.reply_to_message.text.split("#q")[-1]
