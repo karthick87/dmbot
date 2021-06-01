@@ -30,7 +30,7 @@ def entry(bot, update):
         if update.message.reply_to_message and update.message.reply_to_message.forward_from_chat and update.message.reply_to_message.forward_from_chat.id == -1001180443770:
             try:
                 personal_chat_id = update.message.reply_to_message.text.split("#q")[-1]
-                thread_link = 't.me/covid19indiaorg_medhelpchat/'+str(update.message.reply_to_message.message_id)+'?comment='+str(update.message.message_id)
+                thread_link = 't.me/cov19medhelpchat/'+str(update.message.reply_to_message.message_id)+'?comment='+str(update.message.message_id)
                 bot.sendMessage(
                     chat_id=personal_chat_id,
                     text="There is a new comment to your query.\nPlease continue discussion here\n\n"+thread_link)
